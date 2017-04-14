@@ -1,6 +1,6 @@
 import pandas as pd
 from bokeh.plotting import figure, output_file, show
-
+from bokeh.models import DatetimeTickFormatter
 nan = float('nan')
 
 Date = [1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 
@@ -18,4 +18,5 @@ p = figure(plot_width=800, plot_height=250, x_axis_type="datetime")
 
 p.line(Date, Data, color='navy', alpha=0.5)
 
+p.xaxis.formatter=DatetimeTickFormatter( years = ['%Y'] )
 show(p)
