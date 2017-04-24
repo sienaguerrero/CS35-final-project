@@ -1,5 +1,5 @@
 
-import csv 
+import csv, datetime  
 
 filename = "GlobalLandTemperaturesByCountry.csv"
 
@@ -20,3 +20,15 @@ def getTemps(filename = "GlobalLandTemperaturesByCountry.csv"):
             return []
 
     return List_of_rows
+
+def convertDate(tempList):
+    newList = []
+    for tup in tempList:
+        if "-" in tup[0]:
+            newDate = datetime.datetime.strptime(tup[0], '%Y-%m-%d').strftime('%m/%d/%Y')
+            newList.append((newDate, tup[1]))
+        else:
+            newDate = datetime.datetime.strptime(tup[0], '%d-%m-%y').strftime('%m/%d/%Y')
+            newList.append(tup[0],tup[1])
+
+    return newList
