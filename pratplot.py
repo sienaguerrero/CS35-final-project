@@ -42,3 +42,5 @@ def doAllTheWork(filename = "GlobalLandTemperaturesByCountry.csv"):
     for tup in N:
         dateList.append(tup[0])
         tList.append(tup[1])
+    
+    return dateList, tList
