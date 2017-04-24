@@ -1,4 +1,5 @@
-
+from bokeh.plotting import figure, output_file, show
+from bokeh.models import DatetimeTickFormatter
 import csv, datetime  
 
 filename = "GlobalLandTemperaturesByCountry.csv"
@@ -40,7 +41,13 @@ def doAllTheWork(filename = "GlobalLandTemperaturesByCountry.csv"):
     dateList = []
     tList = []
     for tup in N:
-        dateList.append(tup[0])
-        tList.append(tup[1])
-    
-    return dateList, tList
+        if tup[1].isdigit():
+            dateList.append(tup[0])
+            tList.append(int(tup[1]))
+    output_file("pratplot.html")
+    p = figure(plot_width=800, plot_height=250, x_axis_type="datetime")
+
+    p.line(dateList, tList, color='navy', alpha=0.5)
+
+    p.xaxis.formatter=DatetimeTickFormatter( years = ['%d/%m/%Y'], months = ['%d/%m/%Y'], days = ['%d/%m/%Y'] )
+    show(p)
