@@ -37,4 +37,8 @@ def convertDate(tempList):
 def doAllTheWork(filename = "GlobalLandTemperaturesByCountry.csv"):
     L = getTemps(filename)
     N = convertDate(L)
-    return N
+    dateList = []
+    tList = []
+    for tup in N:
+        dateList.append(tup[0])
+        tList.append(tup[1])
