@@ -32,3 +32,9 @@ def convertDate(tempList):
             newList.append(tup[0],tup[1])
 
     return newList
+
+
+def doAllTheWork(filename = "GlobalLandTemperaturesByCountry.csv"):
+    L = getTemps(filename)
+    N = convertDate(L)
+    return N
