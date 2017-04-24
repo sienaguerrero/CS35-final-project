@@ -3,7 +3,7 @@ import csv
 
 filename = "GlobalLandTemperaturesByCountry.csv"
 
-def getTemps(filename = "GlobalLandTemperaturesByCountry.csv")
+def getTemps(filename = "GlobalLandTemperaturesByCountry.csv"):
 
     List_of_rows = [] 
     try:
