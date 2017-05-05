@@ -1,6 +1,6 @@
 import pandas as pd
 from bokeh.plotting import figure, output_file, show
-from bokeh.models import DatetimeTickFormatter, Title
+from bokeh.models import DatetimeTickFormatter, Title, BasicTickFormatter
 nan = float('nan')
 
 Date = [1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 
@@ -19,5 +19,6 @@ p.add_layout(Title(text="Ozone Hole Size (million km squared)", align="center"),
 p.add_layout(Title(text="Date (Years)", align="center"), "below")
 p.line(Date, Data, color='navy', alpha=0.5)
 
-p.xaxis.formatter=DatetimeTickFormatter( years = ['%Y'] )
+#p.xaxis.formatter=DatetimeTickFormatter( years = ['%Y'] )
+p.xaxis.formatter=BasicTickFormatter()
 show(p)
