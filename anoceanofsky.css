@@ -58,7 +58,23 @@ width:121px;
 height: 35px;
 line-height: 35px;
 background-image:url(tab.png);
+}
 
+#name
+{
+font: Georgia;
+color: #000;
+}
+
+#name:hover
+{
+text-align:center;
+border-bottom:none;
+display: block;
+width:121px;
+height: 35px;
+line-height: 35px;
+background-image:url(tab.png);
 }
 
 #mainPicture
@@ -72,6 +88,13 @@ background-color:#FFFFFF;
 {
 width:670px;
 height:345px;
+background-color:#FFFFFF;
+}
+
+#secondPicture
+{
+width:670px;
+height:130px;
 background-color:#FFFFFF;
 }
 
@@ -80,6 +103,17 @@ background-color:#FFFFFF;
 position:relative;
 width:650px;
 height:325px;
+top:10px;
+background-image:url(anoceanofsky.jpg);
+background-repeat:no-repeat;
+margin-left:10px;
+}
+
+#secondPicture .secondPicture
+{
+position:relative;
+width:650px;
+height:110px;
 top:10px;
 background-image:url(anoceanofsky.jpg);
 background-repeat:no-repeat;
