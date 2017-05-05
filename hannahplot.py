@@ -1,6 +1,6 @@
 import pandas as pd
 from bokeh.plotting import figure, output_file, show
-from bokeh.models import DatetimeTickFormatter
+from bokeh.models import DatetimeTickFormatter, Title
 nan = float('nan')
 
 Date = [1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 
@@ -14,8 +14,9 @@ Data = [1.09, 3.27, 3.15, 10.8, 12.24, 14.65, 18.79, 14.37, 22.45, 13.76, 21.73,
 output_file("hannahplot.html")
 
 # create a new plot with a datetime axis type
-p = figure(plot_width=800, plot_height=250, x_axis_type="datetime")
-
+p = figure(title="Ozone Hole Size Over Time", plot_width=800, plot_height=250, x_axis_type="datetime")
+p.add_layout(Title(text="Ozone Hole Size (million km squared)", align="center"), "left")
+p.add_layout(Title(text="Date (Years)", align="center"), "below")
 p.line(Date, Data, color='navy', alpha=0.5)
 
 p.xaxis.formatter=DatetimeTickFormatter( years = ['%Y'] )
