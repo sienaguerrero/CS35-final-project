@@ -14,7 +14,7 @@ Data = [1.09, 3.27, 3.15, 10.8, 12.24, 14.65, 18.79, 14.37, 22.45, 13.76, 21.73,
 output_file("hannahplot.html")
 
 # create a new plot with a datetime axis type
-p = figure(title="Ozone Hole Size Over Time", plot_width=800, plot_height=250, x_axis_type="datetime")
+p = figure(title="Ozone Hole Size Over Time", plot_width=600, plot_height=250, x_axis_type="datetime")
 p.add_layout(Title(text="Ozone Hole Size (million km squared)", align="center"), "left")
 p.add_layout(Title(text="Date (Years)", align="center"), "below")
 p.line(Date, Data, color='navy', alpha=0.5)
