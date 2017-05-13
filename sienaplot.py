@@ -21,7 +21,7 @@ Data = [1.75304482, 1.838272896, 2.076588315, 2.106925052, 2.080412635, 2.062989
 output_file("sienaplot.html")
 
 # create a new plot with a datetime axis type
-p = figure(plot_width=800, plot_height=250, x_axis_type="datetime")
+p = figure(plot_width=400, plot_height=250, x_axis_type="datetime")
 
 
 p = figure(title="CO2 Emissions in Chile Over Time", plot_width=600, plot_height=250, x_axis_type="datetime")
