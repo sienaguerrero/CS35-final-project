@@ -52,7 +52,7 @@ def doAllTheWork(filename = "GlobalLandTemperaturesByCountry.csv"):
         except:
             continue
     output_file("pratplot.html")
-    p = figure(plot_width=800, plot_height=250, x_axis_type="datetime")
+    p = figure(plot_width=600, plot_height=250, x_axis_type="datetime")
 
     p.circle(dateList, tList, radius=0.1, alpha=0.5)
 
