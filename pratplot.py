@@ -28,11 +28,14 @@ def convertDate(tempList):
     for tup in tempList:
         if "-" in tup[0]:
             newDate = datetime.datetime.strptime(tup[0], '%Y-%m-%d').strftime('%m/%Y')
-            print(newDate.month)
-            newList.append((newDate, tup[1]))
+            datetimeDate = datetime.datetime.strptime(newDate, '%m/%Y')
+            if datetimeDate.month == 6 or datetimeDate.month == 7:
+                newList.append((datetimeDate.year, tup[1]))
         else:
             newDate = datetime.datetime.strptime(tup[0], '%d/%m/%y').strftime('%m/%Y')
-            newList.append(tup[0],tup[1])
+            datetimeDate = datetime.datetime.strptime(newDate, '%m/%Y')
+            if datetimeDate.month == 6 or datetimeDate.month == 7:
+                newList.append((datetimeDate.year, tup[1]))
 
     return newList
 
