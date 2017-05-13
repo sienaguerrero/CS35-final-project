@@ -27,10 +27,10 @@ def convertDate(tempList):
     newList = []
     for tup in tempList:
         if "-" in tup[0]:
-            newDate = datetime.datetime.strptime(tup[0], '%Y-%m-%d').strftime('%Y')
+            newDate = datetime.datetime.strptime(tup[0], '%Y-%m-%d').strftime('%m/%Y')
             newList.append((newDate, tup[1]))
         else:
-            newDate = datetime.datetime.strptime(tup[0], '%d/%m/%y').strftime('%Y')
+            newDate = datetime.datetime.strptime(tup[0], '%d/%m/%y').strftime('%m/%Y')
             newList.append(tup[0],tup[1])
 
     return newList
