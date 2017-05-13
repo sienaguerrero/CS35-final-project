@@ -60,21 +60,22 @@ line-height: 35px;
 background-image:url(tab.png);
 }
 
-#name
-{
-font: Georgia;
-color: #000;
+#names {
+	font: Georgia;
 }
-
-#name:hover
-{
-text-align:center;
-border-bottom:none;
-display: block;
-width:121px;
-height: 35px;
-line-height: 35px;
-background-image:url(tab.png);
+.name1 img { 
+	border:1px solid #000;
+	margin:3px;
+	float:left;
+}
+.name1 span { 
+	position:absolute;
+	visibility:hidden;
+}
+.name1:hover, .name1:hover span { 
+	visibility:visible;
+	top:0; left:250px; 
+	z-index:1;
 }
 
 #mainPicture
