@@ -1,6 +1,7 @@
 from bokeh.plotting import figure, output_file, show
 from bokeh.models import DatetimeTickFormatter
-import csv, datetime  
+import csv, datetime 
+from bokeh.models import DatetimeTickFormatter, Title, BasicTickFormatter 
 
 filename = "GlobalLandTemperaturesByCountry.csv"
 
@@ -51,5 +52,5 @@ def doAllTheWork(filename = "GlobalLandTemperaturesByCountry.csv"):
 
     p.circle(dateList, tList, radius=0.1, alpha=0.5)
 
-    p.xaxis.formatter=DatetimeTickFormatter( years = ['%Y'])
+    p.xaxis.formatter=BasicTickFormatter()
     show(p)
