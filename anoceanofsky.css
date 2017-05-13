@@ -67,10 +67,14 @@ background-image:url(tab.png);
 	border:1px solid #000;
 	margin:3px;
 	float:left;
+	height:85px;
+	width:85px;
 }
 .name1 span { 
 	position:absolute;
 	visibility:hidden;
+	height:42px;
+	width:42px;
 }
 .name1:hover, .name1:hover span { 
 	visibility:visible;
